@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Consentimientos Informados - IPS</title>
 
-    <!-- Tipografía -->
+    <!-- Tipografía corporativa -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -17,6 +18,11 @@
   <body>
     <!-- ENCABEZADO -->
     <header class="encabezado">
+      <img
+        src="./logo-evaluasalud.jpeg"
+        class="logo-evaluasalud"
+        alt="Evalúa Salud IPS"
+      />
       <h1>Consentimientos Informados - IPS</h1>
       <p>Seleccione el documento que desea leer y firmar</p>
     </header>
@@ -28,15 +34,20 @@
       </section>
     </main>
 
-    <!-- MODAL PDF + FIRMA -->
+    <!-- MODAL: PDF + FIRMA -->
     <div id="modal-firma" class="modal-oculto">
       <div class="modal-contenido">
         <span id="cerrar-modal" class="btn-cerrar">&times;</span>
 
         <h2 class="titulo-modal">Lectura y Firma del Consentimiento</h2>
 
-        <!-- PDF -->
-        <embed id="visor-pdf" type="application/pdf" class="visor-pdf" />
+        <!-- VISOR PDF -->
+        <embed
+          id="visor-pdf"
+          type="application/pdf"
+          class="visor-pdf"
+          src=""
+        />
 
         <!-- FIRMA -->
         <h3 class="subtitulo-firma">Dibuje su firma para continuar</h3>
@@ -45,14 +56,23 @@
 
         <div class="botones-firma">
           <button id="btn-limpiar" class="btn-secundario">Limpiar</button>
-          <button id="btn-confirmar" class="btn-principal">Confirmar firma</button>
+          <button id="btn-confirmar" class="btn-principal">
+            Confirmar firma
+          </button>
+          <button id="btn-descargar" class="btn-principal">
+            Descargar PDF firmado
+          </button>
         </div>
       </div>
     </div>
 
+    <!-- PIE DE PÁGINA -->
     <footer class="pie-pagina">
       <p>IPS Evalúa Salud - Portal de Consentimientos</p>
     </footer>
+
+    <!-- Librería para manejo profesional de PDFs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js" integrity="sha512-/xYioOsYk4t2idKdvUSuivmP6u3cYIq7uQD4qST8YasbY+8w7m0loQFCrVL8+31V7W2Uypyy3BpTjVZaZX6PRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="./scripts/consentimientos.js"></script>
   </body>
