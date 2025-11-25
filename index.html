@@ -18,38 +18,24 @@
   <body>
     <!-- ENCABEZADO -->
     <header class="encabezado">
-      <img src="logo-evaluasalud.jpeg" class="logo-evaluasalud" alt="Evalúa Salud IPS" />
+      <img
+        src="logo-evaluasalud.jpeg"
+        class="logo-evaluasalud"
+        alt="Evalúa Salud IPS"
+      />
       <h1>Consentimientos Informados - IPS</h1>
-      <p>Seleccione el documento que desea leer y firmar</p>
+      <p>Seleccione el documento que desea leer</p>
     </header>
 
     <!-- LISTA DE CONSENTIMIENTOS -->
     <main>
       <section>
-        <div id="lista-consentimientos" class="grid-consentimientos"></div>
+        <div
+          id="lista-consentimientos"
+          class="grid-consentimientos"
+        ></div>
       </section>
     </main>
-
-    <!-- MODAL: PDF + FIRMA -->
-    <div id="modal-firma" class="modal-oculto">
-      <div class="modal-contenido">
-        <span id="cerrar-modal" class="btn-cerrar">&times;</span>
-
-        <h2 class="titulo-modal">Lectura y Firma del Consentimiento</h2>
-
-        <!-- VISOR PDF -->
-        <embed id="visor-pdf" type="application/pdf" class="visor-pdf" src="" />
-
-        <!-- FIRMA -->
-        <h3 class="subtitulo-firma">Dibuje su firma para continuar</h3>
-        <canvas id="canvas-firma"></canvas>
-
-        <div class="botones-firma">
-          <button id="btn-limpiar" class="btn-secundario">Limpiar</button>
-          <button id="btn-confirmar" class="btn-principal">Confirmar firma</button>
-        </div>
-      </div>
-    </div>
 
     <!-- PIE -->
     <footer class="pie-pagina">
